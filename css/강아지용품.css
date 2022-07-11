@@ -1,0 +1,90 @@
+
+    #container{
+      width: 800px;
+      margin: 0 auto;
+    }
+    /* header */
+    header{
+      background-color: blueviolet;
+      height: 100px;
+    }
+    #logo{
+      width: 200px;
+      height: 100px;
+      float:left;
+      padding: 5px;
+    }
+    #logo img{
+      width:90px;
+      height: 90px;
+    }
+    nav{
+      width:500px;
+      float:right;
+      margin-top: 13.5px;
+    }
+    nav ul{
+      padding: 0;
+    }
+    nav ul li{
+      display: inline-block;
+      padding: 10px;
+    }
+    nav a{
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    /* section */
+    section{
+      width: 600px;
+      float:left;
+    }
+    /* article */
+    article{
+      width: 280px;
+      height: 300px;
+      border:1px solid #ddd;
+      padding: 5px;
+      float: left;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      text-indent: 16px;
+      text-align: justify;
+    }
+    #art1:hover{
+      background-color: blue;
+      color: white;
+    }
+    #art2:hover{
+      background-color: indianred;
+      color: aquamarine
+    }
+    #art3:hover{
+      background-color: bisque;
+    }
+    #art4:hover{
+      background-color: hotpink;
+      color: azure;
+    }
+    /* aside */
+    aside{
+      width:180px;
+      height: 617px;
+      float:right;
+      margin-top: 72px;
+    }
+    aside img{
+      width: 180px;
+      height: 205px;
+    }
+    /* footer */
+    footer{
+      clear:both;
+      text-align: center;
+      font-weight: bold;
+      padding: 10px;
+      background-color: blue;
+      color: white;
+    }
+  

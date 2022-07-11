@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>포지션</title>
+  <style>
+    div {
+      text-align: center;
+      line-height: 50px;
+    }
+
+    #container {
+      border: 1px solid #aaa;
+      position: relative;
+      width: 960px;
+      height: 800px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+
+    .box1 {
+      float: left;
+      width: 100px;
+      background: yellow;
+      margin-right: 10px;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .box2 {
+      position: relative;
+      left: -50px;
+      top: 30px;
+      width: 480px;
+      height: 300px;
+      border: 2px solid blue;
+      float: left;
+      padding: 20px;
+    }
+
+    .squre {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: pink;
+    }
+
+    #s1 {
+      top: 0;
+      left: 0;
+    }
+
+    #s2 {
+      top: 0;
+      right: 0;
+    }
+
+    #s3 {
+      bottom: 0;
+      left: 0;
+    }
+
+    #s4 {
+      bottom: 0;
+      right: 0;
+    }
+
+    #s5 {
+      top: 150px;
+      left: 160px;
+    }
+
+    #s6 {
+      z-index: 3;
+      top: 150px;
+      right: 160px;
+      background: magenta;
+    }
+
+    #s7 {
+      z-index: 1;
+      bottom: 120px;
+      right: 130px;
+      background: cyan;
+    }
+
+    #s8 {
+      z-index: 2;
+      bottom: 100px;
+      right: 140px;
+      background: greenyellow;
+    }
+
+    .box3 {
+      background: red;
+      position: fixed;
+      top: 30px;
+      right: 500px;
+      width: 100px;
+      height: 50px;
+      text-align: left;
+    }
+
+    .invi {
+      visibility: hidden;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 20px;
+    }
+  </style>
+</head>
+<div id="container">
+
+  <body>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2
+      <div class="squre" id="s1">1</div>
+      <div class="squre" id="s2">2</div>
+      <div class="squre" id="s3">3</div>
+      <div class="squre" id="s4">4</div>
+      <div class="squre" id="s5">5</div>
+      <div class="squre" id="s6">1</div>
+      <div class="squre" id="s7">2</div>
+      <div class="squre" id="s8">3</div>
+
+    </div>
+    <div class="box3">fixed</div>
+    <div class="img">
+      <img src="img/사과.jpg">
+      <img src="img/미니어쳐.jpg" class="invi">
+      <img src="img/토토로.jpg">
+    </div>
+</div>
+</body>
+
+</html>
