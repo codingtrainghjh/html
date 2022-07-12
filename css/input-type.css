@@ -1,0 +1,30 @@
+form{
+  width: 700px;
+  margin: 0 auto;
+  background-color: beige;
+  padding: 10px;
+  box-sizing: border-box;
+}
+fieldset{
+  margin-bottom: 10px;
+}
+legend{
+  font-weight: bold;
+}
+form ul li{
+  list-style: none;
+  padding: 3px;
+}
+.box1 label{
+  width: 150px;
+  display: inline-block;
+  text-align: left;
+}
+
+button{
+  margin-left: 5px;
+  background:linear-gradient(to top, rgb(216, 211, 211), white);
+}
+span{
+  color: red;
+}

@@ -1,0 +1,33 @@
+form{
+  width: 700px;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 0.5px solid gray;
+}
+fieldset{
+  margin-bottom: 10px;
+  border: 2px solid;
+}
+legend{
+  font-weight: bold;
+  color: blueviolet;
+  font-size: larger;
+}
+form ul li{
+  list-style: none;
+  padding: 5px;
+}
+label{
+  width:100px;
+  font-weight: bold;
+}
+.info label{
+  float:left;
+}
+
+div{
+  text-align: center;
+  margin-left: 5px;
+  margin: 5%;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>form</title>
+  <link href="css/폼.css" rel="stylesheet">
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>로그인 정보</legend>
+      <ul>
+        <li><label for="name">이름</label>
+          <input id="name" type="text" placeholder="이름을 입력하세요" autofocus></li>
+        <li><label for="psw">비밀번호</label>
+          <input id="psw" type="search"></li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>가입자 정보</legend>
+      <ul>
+        <li><label for="u_name">이름</label>
+            <input id="u_name" type="number" min="1" max="5" step="2"></li>
+        <li><label for="u_mail">메일주소</label>
+            <input id="u_mail" type="range"></li>
+        <li><label for="u_birth">생년월일</label>
+            <input id="u_birth" type="color"></li>
+      </ul>
+    </fieldset>
+    <fieldset class="select">
+      <legend>선택버튼</legend>
+      <ul>
+        <li><label><input type="radio" name="spk" value="low" checked>영어회화<small>(초급)</small></label>
+        <label><input type="radio" name="spk" value="middle">영어회화<small>(중급)</small></label></li>
+      </ul>
+      <ul class="chk">
+        <li><input type="checkbox" name="gram" value="gram" checked>문법
+        <input type="checkbox" name="voca" value="voca">어휘</li>
+      </ul>
+    </fieldset>
+    <fieldset class="center">
+      <input type="submit" value="가입하기">
+      <input type="reset" value="다시입력">
+    </fieldset>
+  </form>
+</body>
+
+</html>
