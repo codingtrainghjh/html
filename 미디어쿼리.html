@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>미디어쿼리</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(9, 100, 160);
+    }
+
+    #container {
+      width: 320px;
+      margin: 50px auto;
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      height: 500px;
+      margin: 20px 10px;
+      border: 1px solid #0f0f0f33;
+      background-color: #ffffff;
+    }
+
+    .words {
+      position: absolute;
+      left: 10px;
+      top: 300px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    img {
+      width: 300px;
+    }
+
+    @media screen and(min-width:768px) and (max-width:1719px) {
+      #container {
+        width: 570px;
+        margin: 50px auto;
+      }
+
+      .card {
+        position: relative;
+        width: 550px;
+        height: 250px;
+        margin: 20px 10px;
+        border: 1px solid #0f0f0f33;
+        background-color: #ffffff;
+      }
+
+      .words {
+        position: absolute;
+        width: 200px;
+        left: 310px;
+        top: 50px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class="card">
+      <img src="img/강아지1.jpg">
+      <div class="words">
+        <h2>멍멍아 야옹해봐</h2>
+        <h3>Gil Goyangi</h3>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/강아지2.jpg">
+      <div class="words">
+        <h2>야옹아 멍멍해봐</h2>
+        <h3>De L Gae</h3>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/강아지3.jpg">
+      <div class="words">
+        <h2>니가 해봐 미친놈아</h2>
+        <h3>Hu Ningen Man</h3>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

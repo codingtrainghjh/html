@@ -4,15 +4,41 @@
   <meta charset="utf-8">
   <title>form</title>
   <link href="css/폼.css" rel="stylesheet">
+  <style>
+    a:link{
+      color: black;
+      text-decoration: none;
+    }
+    a:visited{
+      color:red;
+    }
+    a:hover{
+      background-color: yellow;
+      color: black;
+    }
+    a:focus{
+      background-color: black;
+      color: white;
+    }
+    input:focus{
+      background-color: yellow;
+    }
+    input:disabled{
+      background-color: red;
+    }
+    /* input:enabled{
+      background-color: blue;
+    } */
+  </style>
 </head>
-
 <body>
+  <a href="#">가상클래스</a>
   <form>
     <fieldset>
       <legend>로그인 정보</legend>
       <ul>
         <li><label for="name">이름</label>
-          <input id="name" type="text" placeholder="이름을 입력하세요" autofocus></li>
+          <input id="name" type="text" disabled placeholder="이름을 입력하세요" autofocus></li>
         <li><label for="psw">비밀번호</label>
           <input id="psw" type="search"></li>
       </ul>
