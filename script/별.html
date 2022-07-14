@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>기본문법</title>
+  </head>
+  <body>
+    <script>
+      // let stars ='';
+      // for(let i=0; i<5; i++){
+      //   for(let star=0; star<i+1; star++){
+      //     stars +='*';
+      //   }
+      //   stars +='\n';
+      // }
+      // console.log(stars);
+      //문제1
+        // let odsum=0;
+        // let evensum=0;
+
+        // for(let i=1; i<=100; i++){
+        //   if(i%2==0){evensum += i
+        //   }else{odsum += i}
+        // }
+        // console.log(`evensum : ${evensum}, odsum : ${odsum}`);
+
+      //문제2
+      // for(let i=2; i<10; i++){
+      //   console.log(`${i}단------`)
+      //   for(let j=1; j<10; j++){
+      //     console.log(`${i} * ${j} = ${i*j}`)
+      //   }
+      // }
+
+      //문제3
+      let stars ='';
+    
+      for(let i=1; i<6; i++){
+        for(let b=0; b<5-i; b++){
+            stars +=' ';
+          }
+          
+          for(let s=0; s<2*i-1; s++){
+            stars +='*';
+          }
+        
+        stars +='\n';
+      }
+      for(let i=4; i>=1; i--){
+        for(let b=1; b<6-i; b++){
+          stars +=' ';
+        } 
+        
+        for(let s=0; s<2*i-1; s++){
+          stars +='*';
+        }
+        stars +='\n';
+      }
+    
+      console.log(stars);
+
+    </script>
+  </body>
+</html>
