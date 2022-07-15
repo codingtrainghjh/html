@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>함수</title>
+  </head>
+  <body>
+    <script>
+      //콜백함수
+    // function callTenTimes(callback){
+    //   for(let i = 0; i<10; i++){
+    //     callback();
+    //   }
+    // }
+    // let callback=function(){
+    //   console.log('함수호출')
+    // }
+    // callTenTimes(callback);
+
+    //리턴되는 함수
+    // function returnFunction(){
+    //   return function(){
+    //     console.log('hello Function');
+    //   };
+    // }
+    // returnFunction()();
+    //returnFunction()();
+    //=>(function(){console.log('hello Function')})();
+  
+  //함수 정의 방식1 : 선언문 형태
+  // function myFunc(param){
+  //   console.log(param + "run!");
+  // }
+  // //함수 정의 방식2 : 함수 표현식(리터럴 방식)
+  // const myFunc2 = function(param){
+  //   console.log(param + "run!");
+  // }
+  // //함수 사용 : 호출
+  // myFunc("func1");
+  // myFunc("func2");
+  
+  //화살표함수(익명함수에서만 사용)
+  // let sum = function(a,b){
+  //   return a+b;
+  // }
+  // console.log(sum(5,10));
+
+  // const hi=function(){
+  //   return "hi?";
+  // }
+  // let hi = function(user){
+  //   alert(`hi?`);
+  // }
+//----------------------------------------
+  // let sum = (a,b) => {return a+b}
+
+  // let sum =(a,b) => a+b;
+
+  // console.log(sum(5,10));
+
+  // const hi =() => {return "hi?"}
+  // const hi = () => "hi?"
+
+  // let hi = (user) => alert(`hi?`);
+
+  //클로저
+  // function test(name){
+  //   let output = 'hello' + name;
+  // }
+  // console.log(output);
+  //output -> undefined
+//----------------------------------------
+  // function test(name){
+  //   let output = 'hello' + name;
+
+  //   return function(){
+  //     console.log(output);
+  //   };
+  // }
+  // test('javascript')();
+
+ //---------------------------------------
+    // function test(name){
+    //   let output='hello!' + 'name';
+
+    //   return function(){
+    //     console.log(output);
+    //   };
+    // }
+    // let test1 = test('web');
+    // let test2 = test('javascript');
+    // test1();
+    // test2();
+//----------------------------------------
+    // test1() : (function(){
+    //   console.log('hello!web');
+    // })();
+
+    // test() : (function(){
+    //   console.log('hello! javascript');
+    // })();
+
+    // 커링(curring)함수 : 한번에 인수를 하나만 받아 처리하는 함수
+    // function orderSet(burger){
+    //   return function orderBeverage(beverage){
+    //     return function orderSide(side){
+    //       return function orderKetchup(yn){
+    //         return function orderChiken(count){
+    //           console.log("세트:" + burger + "," + beverage + "," + side + 
+    //           ", + 케첩("+yn+"), 조각치킨("+count+ "개)");
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    // let order = orderSet("상하이스파이스버거")("제로콜라");
+    // order("치즈스틱")("n")("0");
+
+    //----------------------------------------------------
+    // const orderSet = burger => beverage => side => yn => count =>{
+    //   console.log("세트:" + burger + "," + beverage + "," + side + 
+    //         ", + 케첩("+yn+"), 조각치킨("+count+ "개)");
+    // }
+    // let order = orderSet("상하이스파이스버거")("제로콜라");
+    // order("치즈스틱")("n")("0");
+    //=> 실행구조를 단순화 해서 쉽게 읽을 수 있는 것이 장점
+
+    //펼침연산자(spred operator)
+    // let calc =function(x,y,...restparams){
+    //   return x + y + restparams.reduce(function(sum,param){
+    //     return sum + param;
+    //   });
+    // }
+    // let arr=[0,1];
+    // console.log(calc(-1,...arr,2,...[3]));
+    // console.log(calc(-1,0,1,2,3));
+    // let arr2=[1,2,3,4,5,6];
+    // console.log(calc(...arr2));
+    // console.log(calc(null,...arr2));
+
+    //변수의 스코프(scope)
+      // var a=1;
+      // var b=5;
+
+      // function outfunc(){
+      //   function innerfunc(){
+      //     a=b;
+      //   }
+      //   console.log(a);
+
+      //   a=3;
+      //   b=4;
+      //   innerfunc();
+      //   console.log(a);
+      //   var b=2; console.log(b);
+      // }
+
+      // outfunc(); console.log(b);
+
+      //문제1
+      for(i=0; i<3; i++){
+        let name = prompt("이름입력");
+        let kor = Number (prompt("국어점수"));
+        let eng = Number (prompt("영어점수"));
+        let math = Number (prompt("수학점수"));
+        console.log(`${name}|${kor}|${eng}|${math}|평균 : ${sungJuk(kor,eng,math)}`)
+      }
+      function sungJuk(kor, eng, math){
+        let avg=(kor+eng+math)/3;
+        return avg;
+      }
+      
+  </script>
+  </body>
+</html>

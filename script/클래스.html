@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>클래스</title>
+  </head>
+  <body>
+    <script>
+    // class Person{
+    //   constructor (name,age,city){
+    //     // console.log('constructor');
+    //     this.name=name;
+    //     this.age=age;
+    //     this.city=city;
+    //   }
+    //   //메서드생성
+    //   nextYearAge(){
+    //     return Number(this.age)+1;
+    //   }
+    // }
+    // let Kim = new Person('Kim','24','seoul');
+    // //다른 메서드 생성
+    // Kim.eat=function(){
+    //   return 'apple'
+    // }
+    // console.log(Kim.nextYearAge());
+    // console.log(Kim.eat());
+
+    //문제1 : 삼겹살의 가격을 재는 메소드
+    function Product(name, weight,price){
+      this.name=name;
+      this.weight=weight;
+      this.price=price;
+    }
+    Product.prototype.calculate=function(weight){
+      return this.price*(weight/this.weight);
+    }
+    let product = new Product('돼지삼겹살', 100,1690);
+    console.log(product.name+':'+product.calculate(300)+'원');
+  </script>
+  </body>
+</html>
