@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>복습</title>
+  </head>
+  <body>
+    <script>
+      function Student(name,kor,eng,math,art){
+        this.name=name;
+        this.kor=kor;
+        this.eng=eng;
+        this.math=math;
+        this.art=art;
+      }
+      Student.prototype.getSum =function(){
+        return this.kor+this.eng+this.math+this.art
+      };
+      Student.prototype.getAvg =function(){
+        return this.getSum()/4
+      };
+      Student.prototype.toResult =function(){
+        return `${this.name}\t ${this.getSum()}\t ${this.getAvg()}\n`;
+      };
+
+      let students =[];
+      students.push(new Student('홍길동',55,78,98,34));
+      students.push(new Student('성춘향',67,48,77,99));
+      students.push(new Student('이몽룡',82,95,54,86));
+      students.push(new Student('임영웅',91,84,74,66));
+      students.push(new Student('성유리',69,96,75,83));
+      
+      let sungJuk ='이름\t 총점\t 평균\n';
+      sungJuk+='-----------------------------\n';
+      for(let i in students){
+        sungJuk+=students[i].toResult();
+      }
+      sungJuk+='-----------------------------';
+      console.log(sungJuk);
+    </script>
+  </body>
+</html>

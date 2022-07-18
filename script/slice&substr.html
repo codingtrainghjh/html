@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>slice and substr</title>
+  </head>
+  <body>
+    <script>
+      const str1 = 'This is the only one story';
+      console.log(str1.slice(8,11)); //'the'를 반환
+      //시작 인덱스가 음수인 경우 빈 문자열 반환.
+      console.log(str1.slice(-8,11)); //'the'를 반환
+
+      //시작 인덱스가 끝 인덱스보다 크거나 같은 경우 빈 문자열을 반환.(끝 인덱스가 반드시 커야 함).
+      console.log(str1.slice(10,4)); //'the'를 반환
+      //파라메터가 1개만 있을 경우 시작 인덱스 값이 됨.
+      //끝 인덱스가 생략된 것으로 끝 인덱스는 문자열 길이값이 사용됨.
+      console.log(str1.slice(30)); //''를 반환
+
+      //끝 인덱스는 마이너스 값을 사용할 수 있음.
+      //마이너스 값일 경우 (문자열 길이 + 마이너스 값)이 끝 인덱스 값이 됨.
+      console.log(str1.slice(0,-10)); //'This is the only'를 반환.
+
+      //마지막 인덱스+1(문자열 길이값) 보다 큰 값은 마지막 인덱스+1로 대체.
+      console.log(str1.slice(8,100)); //'the only one story' 를 반환.
+      //파라메터가 없을 경우 전체 문자열을 반환
+      console.log(str1.slice()); //'This is the only one story' 를 반환
+
+      console.log(str1.substr(8,11)); //'the only on'를 반환.
+      console.log(str1.substr(11,8)); //'only on'를 반환.
+
+      //파라메터 값이 음수이므로 0으로 먼저 변역하므로 빈 문자열을 반환
+      console.log(str1.substr(11,-8)); //''를 반환
+
+      //시작 인덱스가 음수이므로 문자열 끝에서 10만큼 원쪽으로 이동한 위치부터 8개의 문자열을 반환
+      console.log(str1.substr(-10,8)); //'one sto'를 반환
+
+      //파라메터가 1개만 있을 경우 시작 인덱스 값이 됨. 길이가 생략된 것으로 문자열 길이값이 적용됨.
+      //따라서 문자열 시작 인덱스부터 문자열 끝까지가 반환됨.
+      console.log(str1.substr(10)); //'e only one story'를 반환
+
+      //끝 인덱스는 마이너스 값을 사용할 수 있음. substr(0,0) 문자열을 반환.
+      console.log(str1.substr(0,-10)); //''를 반환
+
+      //마지막 인덱스+1(문자열 길이값) 보다 큰 값은 마지막 인덱스+1로 대체.
+      console.log(str1.substr(8,100)); //'the only one story'를 반환.
+
+      //파라메터가 없을 경우 전체 문자열을 반환
+      console.log(str1.substr()); //'This is the only one story'를 반환
+    </script>
+  </body>
+</html>
