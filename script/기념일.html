@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>기념일</title>
+    <link href="../css/기념일.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="day1">
+        <h2>우리 만난 지</h2>
+        <p id="accent" class="accent">며칠?</p>
+      </div>
+      <div class="bar">기념일 계산</div>
+      <div class="day2">
+        <ul>
+          <li class="item-title">100일</li>
+          <li class="item-date"id="date100"></li>
+        </ul>
+        <ul>
+        <li class="item-title">200일</li>
+        <li class="item-date"id="date200"></li>
+        </ul>
+        <ul>
+        <li class="item-title">1년</li>
+        <li class="item-date"id="date365"></li>
+        </ul>
+        <ul>
+        <li class="item-title">500일</li>
+        <li class="item-date"id="date500"></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script>
+    let now = new Date(); //지금 현재 시간
+    let firstDay = new Date("2022-08-13"); //처음 만난 날 지정
+    let toNow = now.getTime(); //현재 시간을 가져옴
+    let toFirst = firstDay.getTime(); //처음 만난 날을 가져옴
+    let meetTime = toNow-toFirst; //만나온 날 계산
+    let meetDay = Math.round(meetTime/(1000*60*60*24));//js의 ms를 우리 기준으로 수정 
+    document.querySelector("#accent").innerText = meetDay + "일"; //만난 날 출력
+
+    calcDate(100);
+    calcDate(200);
+    calcDate(365);
+    calcDate(500);
+
+    function calcDate(days){ //처음만난 날 부터 계산해서 담음
+      let future = toFirst + days*(24*60*60*1000); //처음만난 날에 일수만큼 더하기
+      let someday = new Date(future); //더한 값을 someday에 담기
+      let year = someday.getFullYear(); //만난 해 가져오기
+      let month = someday.getMonth() + 1; //만난 월 가져오기, 0~11로 가져오기 때문에 +1을 해야함
+      let day = someday.getDate();  //만난 날 가져오기
+      document.querySelector("#date" +days).innerText //date 출력하기
+      = `${year} 년 ${month}월 ${day}일`;
+    }
+  </script>
+</html>

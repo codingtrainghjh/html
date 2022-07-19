@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>타이머</title>
+  <link href="../css/타이머.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="wrapper">
+    <form>
+      <h2>Timer</h2>
+      <label><input type="text" id="startMin">분</label>
+      <label><input type="text" id="startSec">초</label>
+      <input type="button" value="START" class="start-btn" onclick="startTimer()">
+      <input type="button" value="RESET" class="reset-btn" onclick="resetTimer()">
+    </form>
+    <hr>
+    <div id="display" class="remaining">
+    </div>
+  </div>
+  <script>
+    let min = "";
+    let sec = "";
+    let timer = '';
+
+    //함수
+    function startTimer() {
+      min = document.querySelector("#startMin").value;
+      if (min == "") min = 0;
+      sec = document.querySelector("#startSec").value;
+      if (sec == "") min = 0;
+      timer = setInterval(countTimer, 1000);
+    }
+    function countTimer() {
+      if (sec != 0) {
+        sec--;
+        document.querySelector("#display").innerText
+          = min + "분" + sec + "초 남았습니다.";
+      } else {
+        if (min != 0) {
+          min--;
+          sec = 59;
+        }
+        else {
+          clearTimer(timer);
+          document.querySelector("#display").innerText
+            = "종료 되었습니다.";
+        }
+      }
+    }
+    function resetTimer() {
+      clearTime(timer);
+    }
+    function clearTime(t) {
+      clearInterval(t);
+      document.querySelector("#display").innerText = "";
+      document.querySelector("#startMin").value = "";
+      document.querySelector("#startSec").value = "";
+    }
+  </script>
+</body>
+
+</html>

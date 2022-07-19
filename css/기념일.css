@@ -1,0 +1,40 @@
+.container{
+  width: 350px;
+  margin: 20px auto;
+  border: 1px solid #222;
+  
+}
+.day1{
+  text-align: center;
+  margin-top: 30px;
+}
+.bar{
+  background: #333;
+  padding: 5px 10px;
+  color: #fff;
+  margin-top: 40px;
+}
+.day2 ul{
+  list-style: none;
+  border-bottom: 1px solid #888;
+  margin: 20px;
+  padding: 10px;
+  overflow: hidden;
+}
+.day2 ul:last-child{
+  border:none;
+}
+.item-title{
+  float:left;
+  padding-left:30px;
+  font-weight: bolder;
+}
+.item-date{
+  float:right;
+  padding-right: 30px;
+}
+.accent{
+  font-weight: bold;
+  font-size: 2em;
+  color: rgb(226,43,198);
+}

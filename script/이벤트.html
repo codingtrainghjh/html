@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>이벤트</title>
+    <link href="../css/이벤트.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="container">
+      <h1>회원가입</h1>
+      <hr>
+      <form action="#" id="register">
+        <ul id="user-info">
+          <li>
+            <label for="user-id" class="filed">아이디</label>
+            <input type="text" id="user-id"
+                    placeholder="4~15자리의 영문과 숫자로 입력" required></li>
+          <li>
+            <label for="email" class="filed">이메일</label>
+            <input type="email" id="email" required></li>
+          <li>
+            <label for="user-pw1" class="filed">비밀번호</label>
+            <input type="password" id="user-pw1"
+                    placeholder="8자리의 이상" required></li>
+          <li>
+            <label for="user-pw2" class="filed">비밀번호 확인</label>
+            <input type="password" id="user-pw2" required></li>
+          <li>
+            <label class="filed">메일링 수신</label>
+            <label class="r"><input type="radio" value="yes" name="mailing" checked>예</label>
+            <label class="r"><input type="radio" value="no" name="mailing">아니오</label></li>
+        </ul>
+        <ul id="buttons">
+          <li>
+            <button type="submit" class="btn btnBlack">가입하기</button></li>
+          <li>
+            <button type="reset" class="btn btnGray">취소</button></li>
+        </ul>
+      </form>
+    </div>
+    <script src="js.js"> //script는 body가 끝나기 전에</script>
+  </body>
+</html>
