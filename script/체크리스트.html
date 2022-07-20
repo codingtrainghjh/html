@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head lang="ko">
+    <meta charset="utf-8">
+    <title>checkList</title>
+    <link href="../css/체크리스트.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="wrapper">
+      <h2>여행준비물 점검목록</h2>
+      <form>
+        <input type="text" id="item" autofocus>
+        <button type="button" id="add" class="addBtn">추가</button>
+      </form>
+      <div id="itemList"></div>
+    </div>
+    <script>
+      let itemList=[]; //담을공간
+      let addBtn = document.querySelector('#add');//추가버튼
+      addBtn.addEventListener("click",addList);//누르면 addList에 담기
+
+      function addList(){
+        let item = document.querySelector('#item').value;//검색창에 입력한 값 담기
+        if(item !=''){ //만약 item이 공백이 아니라면
+          itemList.push(item);//itemList에서 item밀어내기(밑에 추가하기)
+          document.querySelector('#item').value = "";//검색창 공백으로 채우기
+          document.querySelector('#item').focus();//커서 띄우기
+          showList();
+        }
+      }
+      function showList(){
+        let list= "<ul>"; //list에 ul을 시작
+          for(let i=0; i<itemList.length; i++){ //i에 itemList.length를 담음
+            list += "<li>" + itemList[i]
+              + "<span class='close'id=" + i + ">X</span></li>";
+          }
+        list +="</ul>"; //ul이 닫힘
+        document.querySelector('#itemList').innerHTML = list;
+
+        let remove = document.getElementsByClassName('close');
+        for(let i=0; i<remove.length; i++){
+          remove[i].addEventListener("click",removeList);//클릭시 목록 지우기
+        }
+      }
+      function removeList(){
+        let id = this.getAttribute("id"); //this로 id생성
+        itemList.splice(id,1);
+        showList();
+      }
+    </script>
+  </body>
+</html>
